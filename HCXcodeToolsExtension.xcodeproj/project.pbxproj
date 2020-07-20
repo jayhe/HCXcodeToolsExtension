@@ -7,13 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1062444E24C5816C00B4B94A /* AddLazyCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */; };
+		1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062445024C581BE00B4B94A /* InitViewManager.swift */; };
 		10C3391924C2C8AF0038F25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3391824C2C8AF0038F25E /* AppDelegate.swift */; };
 		10C3391B24C2C8AF0038F25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3391A24C2C8AF0038F25E /* ViewController.swift */; };
 		10C3391D24C2C8B20038F25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C3391C24C2C8B20038F25E /* Assets.xcassets */; };
 		10C3392024C2C8B20038F25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C3391E24C2C8B20038F25E /* Main.storyboard */; };
+		10C3394724C2C9810038F25E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3394624C2C9810038F25E /* Cocoa.framework */; };
+		10C3394A24C2C9810038F25E /* HCSourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3394924C2C9810038F25E /* HCSourceEditorExtension.swift */; };
+		10C3394C24C2C9810038F25E /* HCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3394B24C2C9810038F25E /* HCSourceEditorCommand.swift */; };
+		10C3395124C2C9810038F25E /* HCXcodeTools.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 10C3394424C2C9810038F25E /* HCXcodeTools.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3395E24C56E330038F25E /* NSStringHelper.swift */; };
+		10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3396024C56E4C0038F25E /* NSArrayHelper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		10C3394F24C2C9810038F25E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10C3390D24C2C8AF0038F25E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C3394324C2C9810038F25E;
+			remoteInfo = HCXcodeTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10C3393F24C2C9190038F25E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				10C3395124C2C9810038F25E /* HCXcodeTools.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLazyCodeManager.swift; sourceTree = "<group>"; };
+		1062445024C581BE00B4B94A /* InitViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewManager.swift; sourceTree = "<group>"; };
 		10C3391524C2C8AF0038F25E /* HCXcodeToolsExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCXcodeToolsExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C3391824C2C8AF0038F25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C3391A24C2C8AF0038F25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +55,14 @@
 		10C3391F24C2C8B20038F25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10C3392124C2C8B20038F25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10C3392224C2C8B20038F25E /* HCXcodeToolsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HCXcodeToolsExtension.entitlements; sourceTree = "<group>"; };
+		10C3394424C2C9810038F25E /* HCXcodeTools.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HCXcodeTools.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		10C3394624C2C9810038F25E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		10C3394924C2C9810038F25E /* HCSourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCSourceEditorExtension.swift; sourceTree = "<group>"; };
+		10C3394B24C2C9810038F25E /* HCSourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCSourceEditorCommand.swift; sourceTree = "<group>"; };
+		10C3394D24C2C9810038F25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C3394E24C2C9810038F25E /* HCXcodeTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HCXcodeTools.entitlements; sourceTree = "<group>"; };
+		10C3395E24C56E330038F25E /* NSStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringHelper.swift; sourceTree = "<group>"; };
+		10C3396024C56E4C0038F25E /* NSArrayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArrayHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,13 +73,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10C3394124C2C9810038F25E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C3394724C2C9810038F25E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1062444F24C581B000B4B94A /* InitView */ = {
+			isa = PBXGroup;
+			children = (
+				1062445024C581BE00B4B94A /* InitViewManager.swift */,
+			);
+			path = InitView;
+			sourceTree = "<group>";
+		};
 		10C3390C24C2C8AF0038F25E = {
 			isa = PBXGroup;
 			children = (
 				10C3391724C2C8AF0038F25E /* HCXcodeToolsExtension */,
+				10C3394824C2C9810038F25E /* HCXcodeTools */,
+				10C3394524C2C9810038F25E /* Frameworks */,
 				10C3391624C2C8AF0038F25E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				10C3391524C2C8AF0038F25E /* HCXcodeToolsExtension.app */,
+				10C3394424C2C9810038F25E /* HCXcodeTools.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +124,61 @@
 			path = HCXcodeToolsExtension;
 			sourceTree = "<group>";
 		};
+		10C3394524C2C9810038F25E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10C3394624C2C9810038F25E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10C3394824C2C9810038F25E /* HCXcodeTools */ = {
+			isa = PBXGroup;
+			children = (
+				10C3394924C2C9810038F25E /* HCSourceEditorExtension.swift */,
+				10C3394B24C2C9810038F25E /* HCSourceEditorCommand.swift */,
+				1062444F24C581B000B4B94A /* InitView */,
+				10C3395824C2FD820038F25E /* AddImport */,
+				10C3395924C2FD820038F25E /* AddLazyCode */,
+				10C3395624C2FD820038F25E /* SortImports */,
+				10C3395724C2FD820038F25E /* Tools */,
+				10C3394D24C2C9810038F25E /* Info.plist */,
+				10C3394E24C2C9810038F25E /* HCXcodeTools.entitlements */,
+			);
+			path = HCXcodeTools;
+			sourceTree = "<group>";
+		};
+		10C3395624C2FD820038F25E /* SortImports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SortImports;
+			sourceTree = "<group>";
+		};
+		10C3395724C2FD820038F25E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				10C3395E24C56E330038F25E /* NSStringHelper.swift */,
+				10C3396024C56E4C0038F25E /* NSArrayHelper.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		10C3395824C2FD820038F25E /* AddImport */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddImport;
+			sourceTree = "<group>";
+		};
+		10C3395924C2FD820038F25E /* AddLazyCode */ = {
+			isa = PBXGroup;
+			children = (
+				1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */,
+			);
+			path = AddLazyCode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -73,15 +189,34 @@
 				10C3391124C2C8AF0038F25E /* Sources */,
 				10C3391224C2C8AF0038F25E /* Frameworks */,
 				10C3391324C2C8AF0038F25E /* Resources */,
+				10C3393F24C2C9190038F25E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				10C3395024C2C9810038F25E /* PBXTargetDependency */,
 			);
 			name = HCXcodeToolsExtension;
 			productName = HCXcodeToolsExtension;
 			productReference = 10C3391524C2C8AF0038F25E /* HCXcodeToolsExtension.app */;
 			productType = "com.apple.product-type.application";
+		};
+		10C3394324C2C9810038F25E /* HCXcodeTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10C3395224C2C9810038F25E /* Build configuration list for PBXNativeTarget "HCXcodeTools" */;
+			buildPhases = (
+				10C3394024C2C9810038F25E /* Sources */,
+				10C3394124C2C9810038F25E /* Frameworks */,
+				10C3394224C2C9810038F25E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCXcodeTools;
+			productName = HCXcodeTools;
+			productReference = 10C3394424C2C9810038F25E /* HCXcodeTools.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +229,9 @@
 				ORGANIZATIONNAME = "贺超";
 				TargetAttributes = {
 					10C3391424C2C8AF0038F25E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					10C3394324C2C9810038F25E = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -112,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				10C3391424C2C8AF0038F25E /* HCXcodeToolsExtension */,
+				10C3394324C2C9810038F25E /* HCXcodeTools */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +262,13 @@
 			files = (
 				10C3391D24C2C8B20038F25E /* Assets.xcassets in Resources */,
 				10C3392024C2C8B20038F25E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C3394224C2C9810038F25E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +284,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10C3394024C2C9810038F25E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C3394A24C2C9810038F25E /* HCSourceEditorExtension.swift in Sources */,
+				10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */,
+				1062444E24C5816C00B4B94A /* AddLazyCodeManager.swift in Sources */,
+				10C3394C24C2C9810038F25E /* HCSourceEditorCommand.swift in Sources */,
+				1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */,
+				10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10C3395024C2C9810038F25E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10C3394324C2C9810038F25E /* HCXcodeTools */;
+			targetProxy = 10C3394F24C2C9810038F25E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		10C3391E24C2C8B20038F25E /* Main.storyboard */ = {
@@ -209,6 +376,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -262,12 +430,14 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		10C3392624C2C8B20038F25E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HCXcodeToolsExtension/HCXcodeToolsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -279,6 +449,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -288,6 +459,7 @@
 		10C3392724C2C8B20038F25E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HCXcodeToolsExtension/HCXcodeToolsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,8 +471,53 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		10C3395324C2C9810038F25E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HCXcodeTools/HCXcodeTools.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7J8EXVM7J2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = HCXcodeTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension.HCXcodeTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		10C3395424C2C9810038F25E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HCXcodeTools/HCXcodeTools.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7J8EXVM7J2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = HCXcodeTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension.HCXcodeTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -322,6 +539,15 @@
 			buildConfigurations = (
 				10C3392624C2C8B20038F25E /* Debug */,
 				10C3392724C2C8B20038F25E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10C3395224C2C9810038F25E /* Build configuration list for PBXNativeTarget "HCXcodeTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10C3395324C2C9810038F25E /* Debug */,
+				10C3395424C2C9810038F25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
