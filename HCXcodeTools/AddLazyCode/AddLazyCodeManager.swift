@@ -10,10 +10,7 @@ import Foundation
 import XcodeKit
 
 class AddLazyCodeManager {
-    static func sharedInstance() -> AddLazyCodeManager {
-        let _instance = AddLazyCodeManager.init()
-        return _instance
-    }
+    static let sharedInstance = AddLazyCodeManager()
     
     func processCodeWithInvocation(invocation : XCSourceEditorCommandInvocation) -> Void {
         

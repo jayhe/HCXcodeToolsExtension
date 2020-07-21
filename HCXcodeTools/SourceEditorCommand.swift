@@ -9,15 +9,17 @@
 import Foundation
 import XcodeKit
 
-class HCSourceEditorCommand: NSObject, XCSourceEditorCommand {
+class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         let identifier = invocation.commandIdentifier
         if identifier.hasPrefix(kAddLazyCodeIdentifier) {
-            AddLazyCodeManager.sharedInstance().processCodeWithInvocation(invocation: invocation)
+            AddLazyCodeManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
         } else if identifier.hasPrefix(kInitViewIdentifier) {
-            InitViewManager.sharedInstance().processCodeWithInvocation(invocation: invocation)
+            InitViewManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
+        } else if identifier.hasPrefix(kAddImportIdentifier) {
+            AddImportManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
         }
         completionHandler(nil)
     }

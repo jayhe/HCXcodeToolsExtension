@@ -10,10 +10,7 @@ import Foundation
 import XcodeKit
 
 class InitViewManager {
-    static func sharedInstance() -> InitViewManager {
-        let _instance = InitViewManager.init()
-        return _instance
-    }
+    static let sharedInstance = InitViewManager()
     
     func processCodeWithInvocation(invocation : XCSourceEditorCommandInvocation) -> Void {
         

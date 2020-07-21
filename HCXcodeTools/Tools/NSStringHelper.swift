@@ -29,7 +29,7 @@ extension NSString {
             let characterSet = CharacterSet(charactersIn: tempLeftString)
             array = self.components(separatedBy: characterSet)
             if array.count > 1 {
-                let subArray : [String] = array.last?.components(separatedBy: characterSet) ?? []
+                let subArray: [String] = array.last?.components(separatedBy: characterSet) ?? []
                 if subArray.count > 0 {
                     string = subArray.first ?? ""
                     if string.contains("_") {
@@ -78,7 +78,7 @@ extension NSString {
         
         return returnClassName.deleteSpaceAndNewLine()
     }
-    
+    /// 截取property line中的属性名
     public func fetchPropertyNameString() -> NSString? {
         var propertyNameString : String? = nil
         if self.contains("*") {
@@ -90,7 +90,7 @@ extension NSString {
             let itemArray = tempString0.components(separatedBy: " ")
             if !tempString0.hasPrefix("@property") && itemArray.count == 2 {
                 propertyNameString = itemArray[1].deleteSpaceAndNewLine() as String
-                let tempRange : Range? = propertyNameString?.range(of: ";")
+                let tempRange: Range? = propertyNameString?.range(of: ";")
                 if let index = tempRange?.lowerBound , let string = propertyNameString {
                     //propertyNameString = string.substring(from: range.lowerBound)
                     propertyNameString = String(string[index...])
@@ -101,6 +101,10 @@ extension NSString {
         return propertyNameString as NSString?
     }
     
+    /// 判断是否包含某些字符串并且不包含某些字符串
+    /// - Parameters:
+    ///   - inStrings: 包含的字符串数组
+    ///   - notInStrings: 不包含的字符串数组
     public func checkHasContainString(inStrings: NSArray, notInStrings: NSArray) -> Bool {
         var inFlag = false, notInTag = false
         for tempString in inStrings {

@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		1062444E24C5816C00B4B94A /* AddLazyCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */; };
 		1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062445024C581BE00B4B94A /* InitViewManager.swift */; };
+		107A901224C59D4C00FA565A /* HCXcodeToolsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A901124C59D4C00FA565A /* HCXcodeToolsConstants.swift */; };
+		107A901424C6C03A00FA565A /* AddImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A901324C6C03A00FA565A /* AddImportManager.swift */; };
 		10C3391924C2C8AF0038F25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3391824C2C8AF0038F25E /* AppDelegate.swift */; };
 		10C3391B24C2C8AF0038F25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3391A24C2C8AF0038F25E /* ViewController.swift */; };
 		10C3391D24C2C8B20038F25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C3391C24C2C8B20038F25E /* Assets.xcassets */; };
 		10C3392024C2C8B20038F25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C3391E24C2C8B20038F25E /* Main.storyboard */; };
 		10C3394724C2C9810038F25E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3394624C2C9810038F25E /* Cocoa.framework */; };
-		10C3394A24C2C9810038F25E /* HCSourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3394924C2C9810038F25E /* HCSourceEditorExtension.swift */; };
-		10C3394C24C2C9810038F25E /* HCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3394B24C2C9810038F25E /* HCSourceEditorCommand.swift */; };
+		10C3394A24C2C9810038F25E /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3394924C2C9810038F25E /* SourceEditorExtension.swift */; };
+		10C3394C24C2C9810038F25E /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3394B24C2C9810038F25E /* SourceEditorCommand.swift */; };
 		10C3395124C2C9810038F25E /* HCXcodeTools.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 10C3394424C2C9810038F25E /* HCXcodeTools.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3395E24C56E330038F25E /* NSStringHelper.swift */; };
 		10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3396024C56E4C0038F25E /* NSArrayHelper.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLazyCodeManager.swift; sourceTree = "<group>"; };
 		1062445024C581BE00B4B94A /* InitViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewManager.swift; sourceTree = "<group>"; };
+		107A901124C59D4C00FA565A /* HCXcodeToolsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCXcodeToolsConstants.swift; sourceTree = "<group>"; };
+		107A901324C6C03A00FA565A /* AddImportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImportManager.swift; sourceTree = "<group>"; };
 		10C3391524C2C8AF0038F25E /* HCXcodeToolsExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCXcodeToolsExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C3391824C2C8AF0038F25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C3391A24C2C8AF0038F25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +61,8 @@
 		10C3392224C2C8B20038F25E /* HCXcodeToolsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HCXcodeToolsExtension.entitlements; sourceTree = "<group>"; };
 		10C3394424C2C9810038F25E /* HCXcodeTools.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HCXcodeTools.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C3394624C2C9810038F25E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		10C3394924C2C9810038F25E /* HCSourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCSourceEditorExtension.swift; sourceTree = "<group>"; };
-		10C3394B24C2C9810038F25E /* HCSourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCSourceEditorCommand.swift; sourceTree = "<group>"; };
+		10C3394924C2C9810038F25E /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		10C3394B24C2C9810038F25E /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		10C3394D24C2C9810038F25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10C3394E24C2C9810038F25E /* HCXcodeTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HCXcodeTools.entitlements; sourceTree = "<group>"; };
 		10C3395E24C56E330038F25E /* NSStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringHelper.swift; sourceTree = "<group>"; };
@@ -135,8 +139,9 @@
 		10C3394824C2C9810038F25E /* HCXcodeTools */ = {
 			isa = PBXGroup;
 			children = (
-				10C3394924C2C9810038F25E /* HCSourceEditorExtension.swift */,
-				10C3394B24C2C9810038F25E /* HCSourceEditorCommand.swift */,
+				107A901124C59D4C00FA565A /* HCXcodeToolsConstants.swift */,
+				10C3394924C2C9810038F25E /* SourceEditorExtension.swift */,
+				10C3394B24C2C9810038F25E /* SourceEditorCommand.swift */,
 				1062444F24C581B000B4B94A /* InitView */,
 				10C3395824C2FD820038F25E /* AddImport */,
 				10C3395924C2FD820038F25E /* AddLazyCode */,
@@ -167,6 +172,7 @@
 		10C3395824C2FD820038F25E /* AddImport */ = {
 			isa = PBXGroup;
 			children = (
+				107A901324C6C03A00FA565A /* AddImportManager.swift */,
 			);
 			path = AddImport;
 			sourceTree = "<group>";
@@ -288,10 +294,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10C3394A24C2C9810038F25E /* HCSourceEditorExtension.swift in Sources */,
+				107A901424C6C03A00FA565A /* AddImportManager.swift in Sources */,
+				10C3394A24C2C9810038F25E /* SourceEditorExtension.swift in Sources */,
 				10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */,
+				107A901224C59D4C00FA565A /* HCXcodeToolsConstants.swift in Sources */,
 				1062444E24C5816C00B4B94A /* AddLazyCodeManager.swift in Sources */,
-				10C3394C24C2C9810038F25E /* HCSourceEditorCommand.swift in Sources */,
+				10C3394C24C2C9810038F25E /* SourceEditorCommand.swift in Sources */,
 				1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */,
 				10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */,
 			);
@@ -369,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -440,6 +448,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HCXcodeToolsExtension/HCXcodeToolsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7J8EXVM7J2;
@@ -449,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -462,6 +471,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HCXcodeToolsExtension/HCXcodeToolsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7J8EXVM7J2;
@@ -471,7 +481,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -482,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = HCXcodeTools/HCXcodeTools.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7J8EXVM7J2;
@@ -492,7 +503,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension.HCXcodeTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -504,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = HCXcodeTools/HCXcodeTools.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7J8EXVM7J2;
@@ -514,7 +526,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension.HCXcodeTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

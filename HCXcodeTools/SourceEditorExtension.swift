@@ -9,20 +9,13 @@
 import Foundation
 import XcodeKit
 
-let kSourceEditorClassName = "HCSourceEditorCommand"
-let kAddLazyCodeIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.AddLazyCode"
-let kAddLazyCodeName = "AddLazyCode"
-let kInitViewIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.InitVIew"
-let kInitViewName = "InitVIew"
-
-class HCSourceEditorExtension: NSObject, XCSourceEditorExtension {
+class SourceEditorExtension: NSObject, XCSourceEditorExtension {
 
     /*
     func extensionDidFinishLaunching() {
         // If your extension needs to do any work at launch, implement this optional method.
     }
     */
-    
     
     var commandDefinitions: [[XCSourceEditorCommandDefinitionKey: Any]] {
         // If your extension needs to return a collection of command definitions that differs from those in its Info.plist, implement this optional property getter.
@@ -36,9 +29,16 @@ class HCSourceEditorExtension: NSObject, XCSourceEditorExtension {
             XCSourceEditorCommandDefinitionKey.identifierKey: kInitViewIdentifier,
             XCSourceEditorCommandDefinitionKey.nameKey: kInitViewName
         ]
+        let addImportItem : [XCSourceEditorCommandDefinitionKey: String] = [
+            XCSourceEditorCommandDefinitionKey.classNameKey : kSourceEditorClassName,
+            XCSourceEditorCommandDefinitionKey.identifierKey : kAddImportIdentifier,
+            XCSourceEditorCommandDefinitionKey.nameKey : kAddImportName
+        ]
         
         return [addLazyCodeItem,
-                initViewItem]
+                initViewItem,
+                addImportItem
+        ]
     }
     
 }

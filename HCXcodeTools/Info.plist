@@ -30,15 +30,15 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>HCSourceEditorCommand</string>
+					<string>SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).HCSourceEditorCommand</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>HC Source Editor Command</string>
+					<string>Source Editor Command</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
-			<string>HCSourceEditorExtension</string>
+			<string>SourceEditorExtension</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>
