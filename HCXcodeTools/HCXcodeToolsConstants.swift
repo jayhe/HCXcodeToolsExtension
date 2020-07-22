@@ -8,7 +8,7 @@
 
 import Foundation
 
-let kSourceEditorClassName = "HCSourceEditorCommand"
+let kSourceEditorClassName = "SourceEditorCommand"
 let kAddLazyCodeIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.AddLazyCode"
 let kAddLazyCodeName = "AddLazyCode"
 let kInitViewIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.InitVIew"

@@ -110,7 +110,7 @@ extension NSMutableArray {
     
     func indexOfFirstItem(containedString: NSString, fromIndex: NSInteger, toIndex: NSInteger) -> NSInteger {
         var index = NSNotFound
-        guard fromIndex <= self.count && toIndex <= self.count && containedString.length > 0 else {
+        guard fromIndex < self.count && toIndex < self.count && containedString.length > 0 else {
             return index
         }
 
@@ -130,7 +130,7 @@ extension NSMutableArray {
     }
     
     func insertItems(itemsArray: NSArray, fromIndex: NSInteger) -> Void {
-        guard itemsArray.count > 0 && fromIndex <= self.count else {
+        guard itemsArray.count > 0 && fromIndex < self.count else {
             return
         }
         var insertIndex = fromIndex
@@ -263,7 +263,7 @@ extension NSMutableArray {
          return className;
          */
         var className: NSString? = nil
-        guard currentLineIndex <= self.count else {
+        guard currentLineIndex < self.count else {
             return className
         }
         for index in (0...currentLineIndex).reversed() {
@@ -311,7 +311,7 @@ extension NSMutableArray {
          }
          */
         var deleteFirstLine = 0, deleteLastLine = 0
-        for index in (0...self.count) {
+        for index in (0...self.count-1) {
             guard var tempString: NSString = self.object(at: index) as? NSString else {
                 continue
             }

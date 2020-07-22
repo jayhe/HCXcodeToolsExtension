@@ -12,6 +12,7 @@ import XcodeKit
 class AddImportManager {
     static let sharedInstance = AddImportManager()
     func processCodeWithInvocation(invocation : XCSourceEditorCommandInvocation) -> Void {
+        print("add import")
         guard invocation.buffer.selections.count > 0 else {
             return
         }
@@ -29,19 +30,22 @@ class AddImportManager {
             return
         }
         // 拼接导入头文件的内容
-        let insertString: NSString = NSString.init(format: "import \"%@.h\"", selectedContentString)
-        var alreadyIndex = NSNotFound
+        let insertString: NSString = NSString.init(format: "#import \"%@.h\"", selectedContentString)
+        var alreadyIndex: NSInteger = 0
         alreadyIndex = invocation.buffer.lines.indexOfFirstItemContainString(string: insertString) // 获取是否已经导入过了
-        guard alreadyIndex != NSNotFound else { // 已经导入过头文件了
+        if alreadyIndex != NSNotFound { // 已经导入过头文件了
             return
         }
         // 查找import的最后一行的index
         var lastImportLine = NSNotFound
-        for index in (0...invocation.buffer.lines.count) {
-            var lineString: NSString = invocation.buffer.lines[index] as! NSString
-            lineString = lineString.deleteSpaceAndNewLine()
-            if lineString.contains("import") {
-                lastImportLine = index
+        for index in 0...invocation.buffer.lines.count-1 {
+            let lineString = invocation.buffer.lines[index]
+            if lineString is NSString {
+                var tempString: NSString = lineString as! NSString
+                tempString = tempString.deleteSpaceAndNewLine()
+                if tempString.contains("import") {
+                    lastImportLine = index
+                }
             }
         }
         // 设置插入的行号，如果buffer中已经有import过则lastImportIndex不为NSNotFound，此时插入到lastImportIndex的后一行；否则就插入在首行
