@@ -15,11 +15,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         let identifier = invocation.commandIdentifier
         print(identifier)
-        if identifier.hasPrefix(kAddLazyCodeIdentifier) {
+        if identifier == kAddLazyCodeIdentifier {
             AddLazyCodeManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
-        } else if identifier.hasPrefix(kInitViewIdentifier) {
+        } else if identifier == kInitViewIdentifier {
             InitViewManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
-        } else if identifier.hasPrefix(kAddImportIdentifier) {
+        } else if identifier == kAddImportIdentifier {
             AddImportManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
         }
         completionHandler(nil)

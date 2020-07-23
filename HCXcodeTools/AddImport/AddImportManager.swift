@@ -9,7 +9,7 @@
 import Foundation
 import XcodeKit
 
-class AddImportManager {
+class AddImportManager : HCEditorCommondHandler {
     static let sharedInstance = AddImportManager()
     func processCodeWithInvocation(invocation : XCSourceEditorCommandInvocation) -> Void {
         print("add import")

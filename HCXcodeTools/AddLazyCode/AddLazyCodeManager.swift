@@ -9,7 +9,7 @@
 import Foundation
 import XcodeKit
 
-class AddLazyCodeManager {
+class AddLazyCodeManager : HCEditorCommondHandler {
     static let sharedInstance = AddLazyCodeManager()
     
     func processCodeWithInvocation(invocation : XCSourceEditorCommandInvocation) -> Void {

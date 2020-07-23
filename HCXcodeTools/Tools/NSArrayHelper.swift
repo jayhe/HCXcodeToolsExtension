@@ -24,6 +24,9 @@ extension NSMutableArray {
          }
          return index;
          */
+        guard string.length > 0 else {
+            return NSNotFound
+        }
         let tempString = string.deleteSpaceAndNewLine() as String
         var index = NSNotFound
         var loopIndex = 0
@@ -212,10 +215,11 @@ extension NSMutableArray {
         let referenceClassname: NSString? = self.fetchReferenceClassName()
         var className: NSString = ""
         for item in self {
-            guard let tempString: NSString = item as? NSString else {
+            guard var tempString: NSString = item as? NSString else {
                 continue
             }
             if tempString.hasPrefix(kImplementation) {
+                tempString = tempString.deleteSpaceAndNewLine()
                 let implementationString: NSString = kImplementation as NSString
                 if tempString.contains("(") {
                     className = tempString.stringBetween(leftString: implementationString, rightString: "(")

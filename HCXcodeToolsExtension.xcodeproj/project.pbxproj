@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1062444E24C5816C00B4B94A /* AddLazyCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */; };
 		1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062445024C581BE00B4B94A /* InitViewManager.swift */; };
+		1063BBDB24C917250025F7B2 /* HCEditorCommondHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063BBDA24C917250025F7B2 /* HCEditorCommondHandler.swift */; };
 		107A901424C6C03A00FA565A /* AddImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A901324C6C03A00FA565A /* AddImportManager.swift */; };
 		10B2C79624C6D43A007B0648 /* HCXcodeToolsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A901124C59D4C00FA565A /* HCXcodeToolsConstants.swift */; };
 		10C3391924C2C8AF0038F25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3391824C2C8AF0038F25E /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		1062444D24C5816C00B4B94A /* AddLazyCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLazyCodeManager.swift; sourceTree = "<group>"; };
 		1062445024C581BE00B4B94A /* InitViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewManager.swift; sourceTree = "<group>"; };
+		1063BBDA24C917250025F7B2 /* HCEditorCommondHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCEditorCommondHandler.swift; sourceTree = "<group>"; };
 		107A901124C59D4C00FA565A /* HCXcodeToolsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCXcodeToolsConstants.swift; sourceTree = "<group>"; };
 		107A901324C6C03A00FA565A /* AddImportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImportManager.swift; sourceTree = "<group>"; };
 		10B2C79724C6E965007B0648 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -144,6 +146,7 @@
 				107A901124C59D4C00FA565A /* HCXcodeToolsConstants.swift */,
 				10C3394924C2C9810038F25E /* SourceEditorExtension.swift */,
 				10C3394B24C2C9810038F25E /* SourceEditorCommand.swift */,
+				1063BBDA24C917250025F7B2 /* HCEditorCommondHandler.swift */,
 				1062444F24C581B000B4B94A /* InitView */,
 				10C3395824C2FD820038F25E /* AddImport */,
 				10C3395924C2FD820038F25E /* AddLazyCode */,
@@ -305,6 +308,7 @@
 				10C3394C24C2C9810038F25E /* SourceEditorCommand.swift in Sources */,
 				1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */,
 				10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */,
+				1063BBDB24C917250025F7B2 /* HCEditorCommondHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
