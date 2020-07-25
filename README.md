@@ -8,4 +8,4 @@ Xcode的Editor扩展插件，暂时实现了给属性添加懒加载代码、初
 3. 在Xcode的代码的文件中，选中需要的内容执行对应的指令即可
 
 # 详细文档
-TODO
+[给自己的Xcode写个自动生成代码小插件](https://www.jianshu.com/p/06f495aaf973)
