@@ -19,17 +19,16 @@ extension NSString {
         var array = [String]()
         if leftString == nil {
             let tempRightString = rightString as String
-            let characterSet = CharacterSet(charactersIn: tempRightString)
-            array = self.components(separatedBy: characterSet)
+            array = self.components(separatedBy: tempRightString)
             if array.count > 0 {
                 string = array[0]
             }
         } else {
             let tempLeftString = leftString! as String
-            let characterSet = CharacterSet(charactersIn: tempLeftString)
-            array = self.components(separatedBy: characterSet)
+            array = self.components(separatedBy: tempLeftString)
             if array.count > 1 {
-                let subArray: [String] = array.last?.components(separatedBy: characterSet) ?? []
+                let tempRightString = rightString as String
+                let subArray: [String] = array.last?.components(separatedBy: tempRightString) ?? []
                 if subArray.count > 0 {
                     string = subArray.first ?? ""
                     if string.contains("_") {
@@ -74,31 +73,34 @@ extension NSString {
                 classNameString = itemArray[0]
             }
         }
-        let returnClassName : NSString = classNameString! as NSString
-        
-        return returnClassName.deleteSpaceAndNewLine()
+        if classNameString != nil {
+            let returnClassName : NSString = classNameString! as NSString
+            return returnClassName.deleteSpaceAndNewLine()
+        } else {
+            return nil
+        }
     }
     /// 截取property line中的属性名
     public func fetchPropertyNameString() -> NSString? {
-        var propertyNameString : String? = nil
+        var propertyNameString : NSString? = nil
         if self.contains("*") {
             let tempString = self.deleteSpaceAndNewLine()
-            propertyNameString = tempString.stringBetween(leftString: "*", rightString: ";") as String
-            propertyNameString = propertyNameString?.deleteSpaceAndNewLine() as String?
+            propertyNameString = tempString.stringBetween(leftString: "*", rightString: ";")
+            propertyNameString = propertyNameString?.deleteSpaceAndNewLine()
         } else {
+            // id object;
             let tempString0 = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             let itemArray = tempString0.components(separatedBy: " ")
             if !tempString0.hasPrefix("@property") && itemArray.count == 2 {
-                propertyNameString = itemArray[1].deleteSpaceAndNewLine() as String
-                let tempRange: Range? = propertyNameString?.range(of: ";")
-                if let index = tempRange?.lowerBound , let string = propertyNameString {
-                    //propertyNameString = string.substring(from: range.lowerBound)
-                    propertyNameString = String(string[index...])
+                propertyNameString = itemArray[1].deleteSpaceAndNewLine()
+                let tempRange: NSRange? = propertyNameString?.range(of: ";")
+                if tempRange?.location != NSNotFound {
+                    propertyNameString = propertyNameString?.substring(to: tempRange!.location) as NSString?
                 }
             }
         }
         
-        return propertyNameString as NSString?
+        return propertyNameString
     }
     
     /// 判断是否包含某些字符串并且不包含某些字符串

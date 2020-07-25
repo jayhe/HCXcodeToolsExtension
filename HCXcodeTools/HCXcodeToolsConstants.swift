@@ -8,7 +8,7 @@
 
 import Foundation
 
-let kSourceEditorClassName = "SourceEditorCommand"
+let kSourceEditorClassName = "HCXcodeTools.SourceEditorCommand"
 let kAddLazyCodeIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.AddLazyCode"
 let kAddLazyCodeName = "AddLazyCode"
 let kInitViewIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.InitView"
@@ -45,7 +45,7 @@ let kInitViewControllerLifeCycleCode = "\n#pragma mark - Life Cycle\n\n- (void)v
 //自定义内容格式
 
 
-let kAddLazyCodeTableViewDataSourceAndDelegate = "\n#pragma mark - tableView DataSource\n\n- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {\n    return 5;\n}\n\n- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {\n    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@\"UITableViewCell\"];\n    if (indexPath.row % 2 == 0) {\n        cell.contentView.backgroundColor = [UIColor blueColor];\n     } else {\n        cell.contentView.backgroundColor = [UIColor redColor];\n    }\n    return cell;\n}\n\n#pragma mark - tableView Delegate\n\n- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {\n    return 60;\n}\n\n-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {\n\n}"
+let kAddLazyCodeTableViewDataSourceAndDelegate = "\n#pragma mark - UITableViewDataSource\n\n- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {\n    return 5;\n}\n\n- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {\n    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@\"UITableViewCell\"];\n    if (indexPath.row % 2 == 0) {\n        cell.contentView.backgroundColor = [UIColor blueColor];\n     } else {\n        cell.contentView.backgroundColor = [UIColor redColor];\n    }\n    return cell;\n}\n\n#pragma mark - UITableViewDelegate\n\n- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {\n    return 60;\n}\n\n- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {\n\n}"
 
 let kAddLazyCodeUICollectionViewDelegate = "#pragma mark - UICollectionViewDataSource\n\n- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {\n    return 0;\n}\n\n- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {\n    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@\"UICollectionViewCell\" forIndexPath:indexPath];\n    return cell;\n}\n\n#pragma mark - UICollectionViewDelegate\n\n- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {\n\n}"
 
