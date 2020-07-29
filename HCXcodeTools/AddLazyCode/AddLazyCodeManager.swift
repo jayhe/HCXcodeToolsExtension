@@ -52,7 +52,7 @@ class AddLazyCodeManager : HCEditorCommondHandler {
                     firstString = lazyCodeString
                 }
             })
-            let currentClassName = invocation.buffer.lines.fetchCurrentClassName(with: startLine) // 获取当前需要插入懒加载代码片段的属性所在的类
+            let currentClassName = invocation.buffer.lines.fetchCurrentClassName(to: startLine) // 获取当前需要插入懒加载代码片段的属性所在的类
             let impIndex = invocation.buffer.lines.indexOfFirstItemContainStringsArray(strings: NSArray.init(objects: kImplementation as NSString, currentClassName!)) // 获取@implementation currentClassName 的位置
             let endIndex = invocation.buffer.lines.indexOfFirstItem(containedString: kEnd as NSString, fromIndex: impIndex) // 获取@end的位置
             let existIndex = invocation.buffer.lines.indexOfFirstItem(containedString: firstString as! NSString, fromIndex: impIndex, toIndex: endIndex)
@@ -110,7 +110,7 @@ class AddLazyCodeManager : HCEditorCommondHandler {
     }
     
     private func addDelegateMethodList(with lines: NSMutableArray, selectStartLine: NSInteger) {
-        let currentClassName = lines.fetchCurrentClassName(with: selectStartLine) // 获取当前需要插入懒加载代码片段的属性所在的类
+        let currentClassName = lines.fetchCurrentClassName(to: selectStartLine) // 获取当前需要插入懒加载代码片段的属性所在的类
         let impIndex = lines.indexOfFirstItemContainStringsArray(strings: NSArray.init(objects: kImplementation as NSString, currentClassName!)) // 获取@implementation currentClassName 的位置
         let endIndex = lines.indexOfFirstItem(containedString: kEnd as NSString, fromIndex: impIndex) // 获取@end的位置
         var insertIndex = lines.indexOfFirstItem(containedString: kGetterSetterPragmaMark as NSString, fromIndex: impIndex, toIndex: endIndex)
@@ -129,7 +129,7 @@ class AddLazyCodeManager : HCEditorCommondHandler {
     }
     
     private func addLazyCode(with lines: NSMutableArray, selectStartLine: NSInteger) {
-        let currentClassName = lines.fetchCurrentClassName(with: selectStartLine) // 获取当前需要插入懒加载代码片段的属性所在的类
+        let currentClassName = lines.fetchCurrentClassName(to: selectStartLine) // 获取当前需要插入懒加载代码片段的属性所在的类
         let impIndex = lines.indexOfFirstItemContainStringsArray(strings: NSArray.init(objects: kImplementation as NSString, currentClassName!)) // 获取@implementation currentClassName 的位置
         let endIndex = lines.indexOfFirstItem(containedString: kEnd as NSString, fromIndex: impIndex) // 获取@end的位置
         var insertIndex = lines.indexOfFirstItem(containedString: kGetterSetterPragmaMark as NSString, fromIndex: impIndex, toIndex: endIndex)
@@ -253,7 +253,7 @@ extension AddLazyCodeManager : AddLazyCodeHelper {
         guard className.length > 0 && fromSelectIndex < lines.count else {
             return nil
         }
-        let currentClassName = lines.fetchCurrentClassName(with: fromSelectIndex)
+        let currentClassName = lines.fetchCurrentClassName(to: fromSelectIndex)
         guard currentClassName != nil else {
             return nil
         }
@@ -294,7 +294,7 @@ extension AddLazyCodeManager : AddLazyCodeHelper {
     func checkExistLazyMethod(with className: NSString, propertyName: NSString, lines: NSMutableArray, startLine: NSInteger) -> Bool {
         var existLazyMethod = false
         let lazyFirstLine = NSString.init(format: "-(%@*)%@", className, propertyName)
-        let currentClassName = lines.fetchCurrentClassName(with: startLine)
+        let currentClassName = lines.fetchCurrentClassName(to: startLine)
         let impIndex = lines.indexOfFirstItemContainStringsArray(strings: NSArray.init(objects: kImplementation as NSString, currentClassName!))
         let endIndex = lines.indexOfFirstItem(containedString: kEnd as NSString, fromIndex: impIndex)
         guard impIndex != NSNotFound && endIndex != NSNotFound else {

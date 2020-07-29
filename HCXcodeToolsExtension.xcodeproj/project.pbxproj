@@ -22,6 +22,7 @@
 		10C3395124C2C9810038F25E /* HCXcodeTools.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 10C3394424C2C9810038F25E /* HCXcodeTools.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3395E24C56E330038F25E /* NSStringHelper.swift */; };
 		10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3396024C56E4C0038F25E /* NSArrayHelper.swift */; };
+		10CEC2A424D14EDA000838A2 /* SortImportsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC2A324D14EDA000838A2 /* SortImportsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		10C3394E24C2C9810038F25E /* HCXcodeTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HCXcodeTools.entitlements; sourceTree = "<group>"; };
 		10C3395E24C56E330038F25E /* NSStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringHelper.swift; sourceTree = "<group>"; };
 		10C3396024C56E4C0038F25E /* NSArrayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArrayHelper.swift; sourceTree = "<group>"; };
+		10CEC2A324D14EDA000838A2 /* SortImportsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortImportsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		10C3395624C2FD820038F25E /* SortImports */ = {
 			isa = PBXGroup;
 			children = (
+				10CEC2A324D14EDA000838A2 /* SortImportsManager.swift */,
 			);
 			path = SortImports;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */,
 				1062444E24C5816C00B4B94A /* AddLazyCodeManager.swift in Sources */,
 				10C3394C24C2C9810038F25E /* SourceEditorCommand.swift in Sources */,
+				10CEC2A424D14EDA000838A2 /* SortImportsManager.swift in Sources */,
 				1062445124C581BE00B4B94A /* InitViewManager.swift in Sources */,
 				10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */,
 				1063BBDB24C917250025F7B2 /* HCEditorCommondHandler.swift in Sources */,

@@ -108,7 +108,7 @@ extension NSString {
     ///   - inStrings: 包含的字符串数组
     ///   - notInStrings: 不包含的字符串数组
     public func checkHasContainString(inStrings: NSArray, notInStrings: NSArray) -> Bool {
-        var inFlag = false, notInTag = false
+        var inFlag = false, notInTag = true
         for tempString in inStrings {
             if self.contains(tempString as! String) {
                 inFlag = true

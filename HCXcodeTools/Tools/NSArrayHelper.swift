@@ -156,7 +156,7 @@ extension NSMutableArray {
         return className
     }
     
-    func fetchCurrentClassName(with currentLineIndex: NSInteger) -> NSString? {
+    func fetchCurrentClassName(to currentLineIndex: NSInteger) -> NSString? {
         var className: NSString? = nil
         guard currentLineIndex < self.count else {
             return className

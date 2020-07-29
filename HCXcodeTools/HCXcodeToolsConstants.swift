@@ -15,6 +15,8 @@ let kInitViewIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.InitView"
 let kInitViewName = "InitVIew"
 let kAddImportIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.AddImport"
 let kAddImportName = "AddImport"
+let kSortImportsIdentifier = "com.he.HCXcodeToolsExtension.HCXcodeTools.SortImports"
+let kSortImportsName = "SortImports"
 
 let kImplementation = "@implementation"
 let kInterface = "@interface"

@@ -21,6 +21,8 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             InitViewManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
         } else if identifier == kAddImportIdentifier {
             AddImportManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
+        } else if identifier == kSortImportsIdentifier {
+            SortImportsManager.sharedInstance.processCodeWithInvocation(invocation: invocation)
         }
         completionHandler(nil)
     }
