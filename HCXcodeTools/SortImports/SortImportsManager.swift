@@ -9,7 +9,7 @@
 import Foundation
 import XcodeKit
 
-/// 对import的头文件按照定义的规则进行排序
+/// 对import的头文件按照定义的规则进行排序；使得头文件的引入看的有层次感，模块清晰
 class SortImportsManager : HCEditorCommondHandler {
     
     static let sharedInstance = SortImportsManager()

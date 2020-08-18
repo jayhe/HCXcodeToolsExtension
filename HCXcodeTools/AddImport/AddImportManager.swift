@@ -9,6 +9,7 @@
 import Foundation
 import XcodeKit
 
+/// 选中某个类，快速的导入该类头文件
 class AddImportManager : HCEditorCommondHandler {
     static let sharedInstance = AddImportManager()
     func processCodeWithInvocation(invocation : XCSourceEditorCommandInvocation) -> Void {

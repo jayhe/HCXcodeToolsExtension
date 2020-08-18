@@ -17,6 +17,7 @@ enum HCInitViewType {
     case ViewController
 }
 
+/// 给VC或者常用的view添加生命周期的代码块
 class InitViewManager : HCEditorCommondHandler {
     static let sharedInstance = InitViewManager()
     lazy var indexSet: NSMutableIndexSet = NSMutableIndexSet()

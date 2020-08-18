@@ -9,6 +9,7 @@
 import Foundation
 import XcodeKit
 
+/// 按照预定义的懒加载代码规则，选择属性，然后生成懒加载代码；同时支持一次选中几个属性去生成代码
 class AddLazyCodeManager : HCEditorCommondHandler {
     static let sharedInstance = AddLazyCodeManager()
     lazy var lazyCodeArray: NSMutableArray = NSMutableArray.init()
