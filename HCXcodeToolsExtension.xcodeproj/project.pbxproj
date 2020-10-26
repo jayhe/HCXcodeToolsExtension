@@ -23,6 +23,8 @@
 		10C3395F24C56E330038F25E /* NSStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3395E24C56E330038F25E /* NSStringHelper.swift */; };
 		10C3396124C56E4C0038F25E /* NSArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3396024C56E4C0038F25E /* NSArrayHelper.swift */; };
 		10CEC2A424D14EDA000838A2 /* SortImportsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEC2A324D14EDA000838A2 /* SortImportsManager.swift */; };
+		10D2E1BC25465EC40082D078 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B2C79724C6E965007B0648 /* XcodeKit.framework */; };
+		10D2E1BD25465EC40082D078 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10B2C79724C6E965007B0648 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,17 @@
 				10C3395124C2C9810038F25E /* HCXcodeTools.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10D2E1BE25465EC40082D078 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10D2E1BD25465EC40082D078 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -87,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C3394724C2C9810038F25E /* Cocoa.framework in Frameworks */,
+				10D2E1BC25465EC40082D078 /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +236,7 @@
 				10C3394024C2C9810038F25E /* Sources */,
 				10C3394124C2C9810038F25E /* Frameworks */,
 				10C3394224C2C9810038F25E /* Resources */,
+				10D2E1BE25465EC40082D078 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -443,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -470,7 +485,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -496,7 +511,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -519,7 +534,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension.HCXcodeTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -542,7 +557,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCXcodeToolsExtension.HCXcodeTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
